@@ -12,11 +12,10 @@ What this does
 - setup typescript in strict mode
 - setup vitest
 - add `.nvmrc` based on the latest node.js version
-- setup github action to verify no typescript errors
+- setup github action with typescript check and test run
 - setup prettier with githooks using husky(TODO)
 
-![picture 2](images/81cad71ba5a5540897330738991351104d3bd46af5d77b3d393279f61153a82d.png)  
-
+![picture 2](images/81cad71ba5a5540897330738991351104d3bd46af5d77b3d393279f61153a82d.png)
 
 No version is hardcoded, so you should be getting the latest stuff every time you run `node-platey` command.
 

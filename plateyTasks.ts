@@ -19,15 +19,9 @@ export const plateyTasks = (relativeDir: string) => {
       }
     },
     {
-      title: 'init pnpm',
-      task: () => execa('pnpm', ['init'], { cwd: projectDir })
-    },
-    {
-      title: 'replace ISC license with MIT',
-      task: async () => {
-        return execa('sed', ['-i', 's/ISC/MIT/g', 'package.json'], {
-          cwd: projectDir
-        })
+      title: `git init`,
+      task: () => {
+        return execa('git', ['init'], { cwd: projectDir })
       }
     },
     {
@@ -41,6 +35,18 @@ export const plateyTasks = (relativeDir: string) => {
           ],
           { cwd: projectDir }
         )
+      }
+    },
+    {
+      title: 'init pnpm',
+      task: () => execa('pnpm', ['init'], { cwd: projectDir })
+    },
+    {
+      title: 'replace ISC license with MIT',
+      task: async () => {
+        return execa('sed', ['-i', 's/ISC/MIT/g', 'package.json'], {
+          cwd: projectDir
+        })
       }
     },
     {

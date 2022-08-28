@@ -2,6 +2,6 @@
 
 export default {
   test: {
-    exclude: ['**/node_modules/**', '**/test/**']
+    exclude: ['node_modules/**', 'test/**']
   }
 }
