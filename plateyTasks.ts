@@ -7,6 +7,7 @@ import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 export const plateyDir = dirname(fileURLToPath(import.meta.url))
+// export const plateyDir = __dirname
 
 export const plateyTasks = (relativeDir: string) => {
   const projectDir = path.join(process.cwd(), relativeDir)
@@ -22,7 +23,7 @@ export const plateyTasks = (relativeDir: string) => {
       task: () => execa('pnpm', ['init'], { cwd: projectDir })
     },
     {
-      title: 'replace ISC with MIT',
+      title: 'replace ISC license with MIT',
       task: async () => {
         return execa('sed', ['-i', 's/ISC/MIT/g', 'package.json'], {
           cwd: projectDir

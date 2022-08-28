@@ -5,14 +5,21 @@
   "main": "nodePlatey.js",
   "type": "module",
   "bin": {
-    "node-platey": "nodePlatey.js"
+    "node-platey": "bin.cjs"
   },
   "scripts": {
     "test": "vitest",
-    "build": "tsc"
+    "ts": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "esm",
+    "node",
+    "typescript",
+    "platey",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "capajj@gmail.com",
   "license": "MIT",
   "dependencies": {
     "execa": "^6.1.0",

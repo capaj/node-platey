@@ -1,6 +1,6 @@
 # node-platey
 
-a simple opinionated node.js CLI utility to setup a new node.js library project including typescript, vitest and prettier.
+a simple opinionated node.js CLI utility to setup a new node.js library project including typescript, vitest, prettier and basic github action for checking each commit to `main`.
 
 What this does
 

@@ -9,5 +9,5 @@ describe('plateyTasks', () => {
   })
   it('should create a project', async () => {
     await plateyTasks('test/foo').run()
-  })
+  }, 15000)
 })

@@ -26,5 +26,8 @@
 
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "ts-node": {
+    "esm": true
+  },
+  "exclude": ["node_modules", "dist/**/*"]
 }
