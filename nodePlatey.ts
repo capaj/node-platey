@@ -1,5 +1,3 @@
-#!/usr/bin/env NODE_OPTIONS="--loader ts-node/esm --experimental-specifier-resolution=node" node
-
 import { plateyTasks } from './plateyTasks'
 
 const today =
