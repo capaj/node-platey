@@ -23,7 +23,8 @@
   "license": "MIT",
   "dependencies": {
     "execa": "^6.1.0",
-    "listr": "^0.14.3"
+    "listr": "^0.14.3",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/listr": "^0.14.4",
