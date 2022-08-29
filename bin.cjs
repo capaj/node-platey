@@ -8,6 +8,7 @@ spawnSync(
   'ts-node-esm',
   [
     '--experimental-specifier-resolution=node',
+    '--transpileOnly',
     path.join(__dirname, 'nodePlatey.ts'),
     process.argv[2]
   ],
