@@ -2,6 +2,18 @@
 
 a simple opinionated node.js CLI utility to setup a new node.js library project including typescript, vitest, prettier and basic github action for checking each commit to `main`.
 
+# Usage
+
+```
+npm i node-platey -g
+
+# go to a folder where you want your project created
+
+node-platey my-awesome-project
+
+# folder my-awesome-project in current working directory
+```
+
 What this does
 
 - create the directory
