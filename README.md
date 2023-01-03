@@ -2,6 +2,8 @@
 
 a simple opinionated node.js CLI utility to setup a new node.js library project including typescript, vitest, prettier and basic github action for checking each commit to `main`.
 
+It will be setup for both ESM and CommonJS consumption and build process using tsup no config.
+
 # Usage
 
 ```
@@ -23,6 +25,7 @@ What this does
 - replace `ISC` with `MIT`
 - setup typescript in strict mode
 - setup vitest
+- setup a build command using tsup
 - add `.nvmrc` based on the latest node.js version
 - setup github action with typescript check and test run
 - setup prettier with githooks using husky(TODO)
