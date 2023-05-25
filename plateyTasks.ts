@@ -15,6 +15,10 @@ export const plateyTasks = (relativeDir: string) => {
     {
       title: `mkdir ${relativeDir}`,
       task: () => {
+        if (relativeDir === ".") {
+          console.log("skipping mkdir");
+          return;
+        }
         return execa("mkdir", [relativeDir], { cwd: process.cwd() });
       },
     },
