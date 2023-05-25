@@ -4,21 +4,29 @@ a simple opinionated node.js CLI utility to setup a new node.js library project 
 
 It will be setup for both ESM and CommonJS consumption and build process using tsup no config.
 
-# Usage
+## Usage
 
 ```
 npm i node-platey -g
-
-# go to a folder where you want your project created
-
-node-platey my-awesome-project
-
-# folder my-awesome-project in current working directory
 ```
 
-What this does
+go to a folder where you want your project folder created:
 
-- create the directory
+```
+node-platey my-awesome-project
+```
+
+alternatively if your project folder already exists and you're in it:
+
+```
+node-platey .
+```
+
+folder my-awesome-project in current working directory
+
+## What this does
+
+- create the directory(when you pass something else than ".")
 - git init
 - adds `.gitignore` same as github does when you init node.js project
 - `pnpm init`

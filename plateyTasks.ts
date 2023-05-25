@@ -107,10 +107,11 @@ export const plateyTasks = (relativeDir: string) => {
       },
     },
     {
-      title: `add empty TS index file`,
+      title: `add empty TS index file with spec file`,
       task: async () => {
         await execa("mkdir", ["-p", "src"], { cwd: projectDir });
         await execa("touch", ["src/index.ts"], { cwd: projectDir });
+        await execa("touch", ["src/index.spec.ts"], { cwd: projectDir });
       },
     },
     {
