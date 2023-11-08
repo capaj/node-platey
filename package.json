@@ -32,13 +32,13 @@
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@types/listr": "^0.14.4",
-    "@types/node": "^20.2.3",
+    "@types/listr": "^0.14.8",
+    "@types/node": "^20.9.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.4",
-    "vitest": "^0.31.1"
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
