@@ -1,6 +1,6 @@
 {
   "name": "node-platey",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "",
   "main": "nodePlatey.js",
   "type": "module",
@@ -31,8 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "execa": "^8.0.1",
-    "listr": "^0.14.3",
-    "tsx": "^4.7.0"
+    "listr": "^0.14.3"
   },
   "devDependencies": {
     "@types/listr": "^0.14.9",
