@@ -1,11 +1,14 @@
 {
   "name": "node-platey",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "nodePlatey.js",
   "type": "module",
   "bin": {
     "node-platey": "bin.cjs"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "repository": {
     "type": "git",
