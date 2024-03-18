@@ -48,7 +48,7 @@ export const plateyTasks = (relativeDir: string) => {
     {
       title: 'replace ISC license with MIT',
       task: async () => {
-        return execa('sed', ['-i', 's/ISC/MIT/g', 'package.json'], {
+        await execa('sed', ['-i', '', 's/ISC/MIT/g', 'package.json'], {
           cwd: projectDir
         })
       }

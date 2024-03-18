@@ -9,7 +9,7 @@ It will be setup for both ESM and CommonJS consumption and build process using t
 ```
 npm i node-platey -g
 ```
-
+alternatively just prepend with `bunx`
 go to a folder where you want your project folder created:
 
 ```
