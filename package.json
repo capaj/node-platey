@@ -30,17 +30,17 @@
   "author": "capajj@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "execa": "^9.1.0",
+    "execa": "^9.3.0",
     "listr": "^0.14.3"
   },
   "devDependencies": {
     "@types/listr": "^0.14.9",
-    "@types/node": "^20.12.12",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "@types/node": "^22.0.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
