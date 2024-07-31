@@ -2,15 +2,24 @@ import { execa } from 'execa'
 import Listr from 'listr'
 import path from 'path'
 import fs from 'fs/promises'
-
+import inquirer from 'inquirer'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 export const plateyDir = dirname(fileURLToPath(import.meta.url))
 // export const plateyDir = __dirname
 
-export const plateyTasks = (relativeDir: string) => {
+export const plateyTasks = async (relativeDir: string) => {
   const projectDir = path.join(process.cwd(), relativeDir)
+
+  await inquirer.prompt([
+    {
+      type: 'list',
+      message: 'Do you want a CLI command included?',
+      choices: ['Yes', 'No'],
+      name: 'cli'
+    }
+  ])
   return new Listr([
     {
       title: `mkdir ${relativeDir}`,
@@ -75,6 +84,7 @@ export const plateyTasks = (relativeDir: string) => {
           test: 'vitest',
           ts: 'tsc --noEmit',
           build: 'tsup src/index.ts --format cjs,esm --dts --sourcemap',
+          clean: 'rm -rf dist',
           prepublishOnly: 'npm run build'
         }
 
