@@ -9,8 +9,10 @@ import { fileURLToPath } from 'url'
 export const plateyDir = dirname(fileURLToPath(import.meta.url))
 // export const plateyDir = __dirname
 
-export const plateyTasks = (relativeDir: string) => {
-  const projectDir = path.join(process.cwd(), relativeDir)
+export const plateyTasks = (relativeDir: string | undefined) => {
+  const projectDir = relativeDir
+    ? path.join(process.cwd(), relativeDir)
+    : process.cwd()
   return new Listr([
     {
       title: `mkdir ${relativeDir}`,
