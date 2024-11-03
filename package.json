@@ -17,6 +17,7 @@
   "scripts": {
     "test": "vitest",
     "ts": "tsc --noEmit",
+    "prepublishOnly": "npm run ts",
     "prepare": "husky install"
   },
   "keywords": [
