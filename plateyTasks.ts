@@ -15,7 +15,7 @@ export const plateyTasks = (relativeDir: string) => {
     {
       title: `mkdir ${relativeDir}`,
       task: () => {
-        if (relativeDir === '.') {
+        if (relativeDir === '.' || relativeDir === undefined) {
           console.log('skipping mkdir')
           return
         }
@@ -46,11 +46,17 @@ export const plateyTasks = (relativeDir: string) => {
       task: () => execa('pnpm', ['init'], { cwd: projectDir })
     },
     {
-      title: 'replace ISC license with MIT',
+      title: 'replace ISC license with MIT in package.json',
       task: async () => {
-        await execa('sed', ['-i', '', "'s/ISC/MIT/g'", 'package.json'], {
-          cwd: projectDir
-        })
+        const packageJson = JSON.parse(
+          await fs.readFile(path.join(projectDir, 'package.json'), 'utf-8')
+        )
+        packageJson.license = 'MIT'
+        await fs.writeFile(
+          path.join(projectDir, 'package.json'),
+          JSON.stringify(packageJson, null, 2),
+          'utf-8'
+        )
       }
     },
     {
